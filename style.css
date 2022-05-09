@@ -1,0 +1,71 @@
+h1,
+h2,
+h3,
+p,
+ul,
+input {
+  font-family: "Lobster", cursive;
+  color: black;
+  opacity: 0.9;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: left;
+  margin: 10px auto;
+  opacity: 0.9;
+}
+
+h2 {
+  margin: 25px auto;
+  font-size: 47px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 40px;
+}
+
+ul {
+  list-style: none;
+  text-align: right;
+  font-size: 20px;
+}
+
+input {
+  margin: 5px auto;
+  border-radius: 10px;
+  border: 1px solid #beb293;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.144);
+}
+
+.outside {
+  text-align: center;
+  font-size: 18px;
+  margin: 15px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 650px;
+  width: 600px;
+  border: none;
+  box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.349);
+  border-radius: 15px;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/030/733/original/Beige-Aesthetic-Wallpapersun-7.jpg?1648857299");
+}
+
+.name {
+  font-size: smaller;
+  margin: 30px;
+  text-align: right;
+  color: rgba(101, 120, 101, 0.571);
+}
