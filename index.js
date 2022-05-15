@@ -23,7 +23,7 @@ function displayWeatherCondition(response) {
   document.querySelector("h1").innerHTML =
     "Currently in...<br>" + response.data.name;
   document.querySelector("h2").innerHTML =
-    "🌙 <br>" + Math.round(response.data.main.temp) + "°";
+    response.data.weather[0].icon +  "<br>" + Math.round(response.data.main.temp) + "°";
 }
 
 function search(event) {
@@ -47,7 +47,13 @@ form.addEventListener("click", search);
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let h2 = document.querySelector("h2");
-  h2.innerHTML = "🌙 <br>" + temperature + "°";
+  let iconElement = document.querySelector("#icon");
+
+  h2.innerHTML = response.data.weather[0].icon + "<br>" + temperature + "°";
+  iconElement.setAttribute(
+    "src",
+    'http://openweathermap.org/img/wn/' + response.data.weather[0].icon + '@2x.png'
+  );
 }
 
 function currentPosition(position) {
