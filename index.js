@@ -20,10 +20,11 @@ h3.innerHTML = day + " " + hour + ":" + minutes;
 
 function displayWeatherCondition(response) {
   console.log(response.data);
+
   document.querySelector("h1").innerHTML =
     "Currently in...<br>" + response.data.name;
   document.querySelector("h2").innerHTML =
-    response.data.weather[0].icon +  "<br>" + Math.round(response.data.main.temp) + "°";
+    response.data.weather[0].icon + "<br>" + Math.round(response.data.main.temp) + "°";
 }
 
 function search(event) {
