@@ -25,6 +25,8 @@ function displayWeatherCondition(response) {
     "Currently in...<br>" + response.data.name;
   document.querySelector("h2").innerHTML =
     response.data.weather[0].icon + "<br>" + Math.round(response.data.main.temp) + "° <br>" + response.data.weather[0].description;
+  document.querySelector("h4").innerHTML =
+    Math.round(response.data.wind.speed);
 }
 
 function search(event) {
