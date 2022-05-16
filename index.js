@@ -47,9 +47,12 @@ form.addEventListener("click", search);
 
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
+  let wind = Math.round(response.data.wind.speed);
   let h2 = document.querySelector("h2");
+  let h4 = document.querySelector("h4");
   let iconElement = document.querySelector("#icon");
 
+  h4.innerHTML = "Wind: " + wind;
   h2.innerHTML = response.data.weather[0].icon + "<br>" + temperature + "°";
   iconElement.setAttribute(
     "src",
