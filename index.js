@@ -23,8 +23,14 @@ function displayWeatherCondition(response) {
 
   document.querySelector("h1").innerHTML =
     "Currently in...<br>" + response.data.name;
+    iconElement.getAttribute(
+      "src",
+      "http://openweathermap.org/img/wn/" +
+        response.data.weather[0].icon +
+        "@2x.png"
+    );
   document.querySelector("h2").innerHTML =
-    response.data.weather[0].icon + "<br>" + Math.round(response.data.main.temp) + "° <br>" + response.data.weather[0].description;
+    Math.round(response.data.main.temp) + "° <br>" + response.data.weather[0].description;
   document.querySelector("h4").innerHTML =
     "Wind: " + Math.round(response.data.wind.speed);
 }
@@ -55,9 +61,9 @@ function showTemperature(response) {
   let h4 = document.querySelector("h4");
   let iconElement = document.querySelector("#icon");
 
-  h2.innerHTML = response.data.weather[0].icon + "<br>" + temperature + "° <br>" + weatherDescription;
+  h2.innerHTML = temperature + "° <br>" + weatherDescription;
   h4.innerHTML = "Wind: " + wind;
-  iconElement.setAttribute(
+  iconElement.getAttribute(
     "src",
     'http://openweathermap.org/img/wn/' + response.data.weather[0].icon + '@2x.png'
   );
