@@ -69,9 +69,8 @@ input {
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/030/733/original/Beige-Aesthetic-Wallpapersun-7.jpg?1648857299");
 }
 
-.name {
-  font-size: smaller;
-  margin: 30px;
-  text-align: right;
+footer {
+  font-size: 16px;
+  text-align: left;
   color: rgba(101, 120, 101, 0.571);
 }
