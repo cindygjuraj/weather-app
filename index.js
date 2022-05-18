@@ -20,18 +20,13 @@ h3.innerHTML = day + " " + hour + ":" + minutes;
 
 //display forecast
 
-
-
-
-
-
-
-
-
-
-
-
-
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "e8201d3985da616d04bf2443bbf2eeaa";
+  let apiUrl = "api.openweathermap.org/data/2.5/forecast?lat=" + coordinates.lat + "&lon=" + coordinates.lon + "&appid=" + apiKey + "&units=imperial";
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 
 
 
