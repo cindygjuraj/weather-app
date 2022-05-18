@@ -4,7 +4,8 @@ h3,
 h4,
 p,
 ul,
-form {
+form,
+footer {
   font-family: "Lobster", cursive;
   color: black;
   opacity: 0.9;
