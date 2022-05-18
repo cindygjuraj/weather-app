@@ -3,7 +3,6 @@ h2,
 h3,
 h4,
 p,
-ul,
 form,
 footer {
   font-family: "Lobster", cursive;
@@ -25,12 +24,12 @@ h1 {
 
 h3 {
   font-size: 40px;
-  text-align: center;
+  text-align: right;
 }
 
 .current {
-  font-size: 16px;
-  text-align: center;
+  font-size: 20px;
+  text-align: right;
 }
 
 p {
@@ -38,11 +37,6 @@ p {
   font-size: 40px;
 }
 
-ul {
-  list-style: none;
-  text-align: right;
-  font-size: 20px;
-}
 
 input {
   margin: 5px auto;
@@ -57,12 +51,17 @@ input {
   margin: 15px;
 }
 
+.weather-forecast {
+  font-size: 20px;
+  text-align: center;
+}
+
 .box {
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: 650px;
-  width: 600px;
+  width: 500px;
   border: none;
   box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.349);
   border-radius: 15px;
@@ -74,3 +73,4 @@ footer {
   text-align: left;
   color: rgba(101, 120, 101, 0.571);
 }
+
