@@ -18,6 +18,28 @@ let day = days[now.getDay()];
 let h3 = document.querySelector("h3");
 h3.innerHTML = day + " " + hour + ":" + minutes;
 
+//display forecast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//display forecast
+
+
 function displayWeatherCondition(response) {
   console.log(response.data);
 
@@ -33,7 +55,7 @@ function displayWeatherCondition(response) {
   document.querySelector("h2").innerHTML =
     Math.round(response.data.main.temp) + "° <br>" + response.data.weather[0].description;
   document.querySelector("h4").innerHTML =
-    "Wind: " + Math.round(response.data.wind.speed);
+    "Wind: " + Math.round(response.data.wind.speed) + "<br> Humidity: " + response.data.main.humidity + "%";
 }
 
 function search(event) {
@@ -57,13 +79,14 @@ form.addEventListener("click", search);
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let wind = Math.round(response.data.wind.speed);
+  let humidity = response.data.main.humidity;
   let weatherDescription = response.data.weather[0].description;
   let h2 = document.querySelector("h2");
   let h4 = document.querySelector("h4");
   let iconElement = document.querySelector("#icon");
 
   h2.innerHTML = temperature + "° <br>" + weatherDescription;
-  h4.innerHTML = "Wind: " + wind;
+  h4.innerHTML = "Wind: " + wind + "<br> Humidity: " + humidity + "%";
   iconElement.setAttribute("src", 'http://openweathermap.org/img/wn/' + response.data.weather[0].icon + '@2x.png');
 }
 
